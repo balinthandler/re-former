@@ -1,10 +1,6 @@
-<%= form_with model: @user do |form| %>
-  <%= form.text_field :username, placeholder: "Type username here..." %>
-  <%= form.text_field :email, placeholder: "Email address" %>
-  <%= form.text_field :password, placeholder: "Password" %>
-  <%= form.submit value="Submit User"%>
-<% end %>
-
+<h2>New User</h2>
+<%= render "form", user: @user %>
+<%= link_to 'Back to Users', users_path%>
 <%
 =begin%>
  <%= form_tag(method: "post") do %>
